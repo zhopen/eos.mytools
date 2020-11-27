@@ -1,4 +1,4 @@
-cat <<EOF | xargs -i -n1 -P 50 bash -c "cleos http://{}:3938 get info | grep -e last_irr -e head_block |tr -d `\r\n`; echo {} "
+cat <<EOF | xargs -i -n1 -P 50 bash -c "cleos -u http://{}:3938 get info | grep -e last_irr -e head_block |tr -d ' \r\n'; echo {} "
 10.254.6.75
 10.254.82.75
 10.254.70.75
